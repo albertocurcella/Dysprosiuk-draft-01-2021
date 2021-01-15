@@ -1,0 +1,168 @@
+\documentclass[reprint,amsmath,amssymb,aps,nofootinbib,onecolumn]{revtex4-2}
+\usepackage{amsmath,graphicx,latexsym}
+\usepackage{braket}
+\usepackage{xcolor}
+
+\usepackage[colorlinks=false,bookmarks=false,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+
+%\renewcommand{\thefigure}{S\arabic{figure}}
+%\renewcommand{\thepage}{S\arabic{page}}
+\begin{document}
+
+\title{Supplementary Material\\Spin dynamics in single Dy adatoms on graphene/Ir(111)
+studied by SP-STM}
+
+\author{D. Sblendorio}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\author{A. Curcella}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\author{S. Rusponi}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\author{M. Pivetta}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\author{F. Patthey}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\author{H. Brune}
+\affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
+
+\maketitle
+
+\section{State Lifetimes}
+The lifetimes of the high conductance state $\tau_{h}$ and low conductance state $\tau_{l}$ can be simultaneously described by a new quantity, which we define as $\tau^{*}$ \citep{Khajetoorians2013}. Let the index $i=\ket{l}$, $\ket{h}$ indicate the low and high conductance states, respectively. The index $\overline{i}$, then indicates the opposite magnetization state. The probability of switching from $ i$ to $\overline{i} $ at time $t$ is given by $ p_{i \overline{i}} $, while the probability of remaining in the same state is given by $ p_{ii} $. We neglect any transient state such that: $ p_{i\overline{i}} + p_{ii} = 1$. The time evolution of $ p_{ii} $ in an infinitesimal time range $dt$ is given by:
+
+\begin{equation}
+p_{ii}(t+dt)=p_{i\overline{i}}(t)\frac{dt}{\tau_{\overline{i}}}+p_{ii}(t)\left( 1-\frac{dt}{\tau_i} \right)=(1-p_{ii}(t))\frac{dt}{\tau_{\overline{i}}}+p_{ii}(t)\left( 1-\frac{dt}{\tau_i} \right)=p_{ii}(t)+\frac{dt}{\tau_{\overline{i}}}-p_{ii}(t)\frac{dt}{\tau^*}
+\label{eq:prob_dt}
+\end{equation}
+
+in which we define $\frac{1}{\tau^*}\equiv\frac{1}{\tau_i}+\frac{1}{\tau_{\overline{i}}}$. Simplifying further from  (\ref{eq:prob_dt}) gives:
+
+\begin{equation}
+\frac{dp_{ii}(t)}{dt}=\frac{1}{\tau_{\overline{i}}}-\frac{p_{ii}(t)}{\tau^*}  
+\label{eq:diff_p}
+\end{equation}
+
+\begin{equation}
+p_{ii}(t)=\frac{\tau^*}{\tau_{\overline{i}}}-\exp(-\frac{t}{\tau^{*}})c_1\rightarrow\frac{\tau^{*}}{\tau_{\overline{i}}}-\frac{\tau^{*}}{\tau_i}\exp(-\frac{t}{\tau^*})
+\label{eq:sol_diff}
+\end{equation}
+
+The condition $p_{ii}(0)=1$ determines the value of the constant $c_1=\frac{\tau^{*}}{\tau_i}$.Note that Eq.~\ref{eq:diff_p} is completely independent of the initial state $i$. Thus, the new quantity $\tau^{*}$ governs the time evolution of both $\ket{l}$ and $\ket{h}$ state. The factors $\frac{\tau^{*}}{\tau_{\overline{i}}} $ and $ \frac{\tau^{*}}{\tau_{i}} $ are the occupancy of the state $\overline{i}$ and $i$, respectively. These quantities can be measured experimentally from the telegraph-noise traces.  
+
+
+\section{Description of scattering rates and tunneling current}
+
+For the description of the scattering rates and tunneling current we follow the formalism presented by Delgado \textit{et al.}~\cite{delgado2010}. The STM current can be written as:
+
+\begin{equation}
+I_{S\rightarrow T} = e \sum_{M,M^{\prime}}P_M(U)\left(W_{M,M^{\prime}}^{S\rightarrow T}-W_{M,M^{\prime}}^{T\rightarrow S}\right)
+\label{eq:stm_curr}
+\end{equation}
+
+Where $P_M(U)$ are the steady state solutions for each state $M$ of the master equation described below and $W_{M,M^{\prime}}^{\eta \rightarrow \eta'}$ are the scattering rates from state $M$ to $M'$ induced by tunneling electrons that are initially in electrode $\eta$ and end up in electrode $\eta'$. The master equation reads:
+
+\begin{equation}
+\dfrac{dP_M}{dt}=\sum_M P_{M^{\prime}}W_{M^{\prime},M} - P_M\sum_{M^{\prime}}W_{M,M^{\prime}}
+\end{equation}
+
+$P_M$ are the diagonal elements of the density matrix expressed in the basis of eigenstates $\ket{M}$ of the unperturbed Hamiltonian. In our model, we treat the phonon and tunneling electron Hamiltonian terms as the perturbations. We initialize the master equation by populating the lowest eigenstate $\ket{M}$ at unity ($P_M = 1$). We let the system evolve under the transition rates $W_{M,M^{\prime}}$ (which consider all possible transitions between all electrodes), until steady state solutions for $P_M$ are obtained. This allows for the determination of $\tau^{*}$, $\tau_i$, and $\tau_{\overline{i}}$.   
+To obtain expression for the transition rates in the master equation, we consider the electrodes $\eta$, $\eta^{\prime} \in\lbrace S=surface, T=tip\rbrace$. As is shown in \cite{delgado2010}, a simplified expression for the rates is:
+
+\begin{equation}
+W_{M,M^{\prime}}^{\eta \rightarrow \eta^{\prime}}=A_0 \mathcal{F}^{\eta\eta^{\prime}}(U+\Delta E_{M,M^{\prime}})\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}
+\label{eq:scatt_rates}
+\end{equation}
+
+where $A_0$ is a grouping of constants discussed below, $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ are the quantum rates determined by the off-diagonal terms in the density matrix, and  $\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm U )$ is the Fermi-Dirac term to account for the occupation probability of each state:
+
+\begin{equation}
+\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm U )=\dfrac{\Delta E_{M,M^{\prime}}\pm U}{exp\left[\left( \Delta E_{M,M^{\prime}}\pm U  \right)\beta\right]-1}
+\label{eq:fermi_conv}
+\end{equation}
+
+in which $\Delta E_{M,M^{\prime}}$ is the energy difference between energy levels $\ket{M}$ and $\ket{M^{\prime}}$, $U$ is the bias between tip and sample, and $\beta=1/k_b T$. We group constants into $A_0$ in Eq.~\ref{eq:scatt_rates}. These constants are dependent on unknown quantities such as the tip-adatom, surface-adatom coupling and the strength of the elastic channel. Our strategy for determining these quantities is to group and solve for them using know experimental conditions if possible, otherwise we leave them as free parameters within the model. This is discussed further below. 
+
+The quantum rates $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ of Eq.~\ref{eq:scatt_rates} are explicitly written as:
+
+\begin{equation}
+\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}=\dfrac{1}{4}\delta_{M,M^{\prime}}\left[  \mathcal{R}^{+}(\eta\eta^{\prime})+ 2\zeta \mathcal{R}^{-}(\eta\eta^{\prime})\textbf{S}_{z,\eta\eta^{\prime}}^{M,M^{\prime}}  \right] + \zeta^{2}\left[ \rho_\eta \rho_\eta^{\prime} \eta_{\downarrow}\eta^{\prime}_{\uparrow} \lvert \textbf{S}_{+,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert + \rho_\eta \rho_\eta^{\prime} \eta_{\uparrow}\eta^{\prime}_{\downarrow} \lvert {\textbf{S}_{-,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert +\mathcal{R}^{+}(\eta\eta^{\prime}) \lvert \textbf{S}_{z,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert \right]
+\label{eq:yota_contr} 
+\end{equation}
+
+This expression can be interpreted as three forms of scattering rates: elastic, elastic magnetoresistive, and inelastic. Between the first pair of square brackets we find the elastic contributions, as $\delta_{M,M^{\prime}}$ implies. The second square-bracketed terms represent the inelastic contribution.
+The second term of the elastic component describes the magnetoresistive contribution. Note that only the scattering rates between tip and sample, i.e. $\eta\neq\eta^{\prime}$, contribute to the current. However, tip-to-tip and sample-to-sample scattering events, i.e. $\eta=\eta^{\prime}$, contribute to the global  rate. $\rho_{\eta}$ represents the density of state at Fermi in the electrode $\eta$; $\eta_{\uparrow / \downarrow}$ is the fraction of electrons in the up or down state in electrode $\eta$. The term $\zeta$ in Eq.~\ref{eq:yota_contr} represents the ratio between inelastic and elastic tunnel matrix elements, and is left as a free parameter within our model. 
+
+The two terms $\mathcal{R}^{+}$ and $\mathcal{R}^{-}$ are defined as:
+
+\begin{equation}
+\mathcal{R}^{\pm}(\eta\eta^{\prime})=\rho_\eta\rho_{\eta^{\prime}}\left( \eta_{\uparrow}\eta^{\prime}_{\uparrow} \pm \eta_{\downarrow}\eta^{\prime}_{\downarrow} \right)
+\label{eq:R_+-}
+\end{equation}
+
+Combining equations (\ref{eq:stm_curr}) and (\ref{eq:R_+-}) allows us to obtain expression for the three corresponding contributions to the current, imposing $\eta \neq \eta^{\prime} $.
+The first elastic contribution:
+\begin{equation}
+I_0=\dfrac{e}{4} A_0 \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\rho_S\rho_T \left( S_{\uparrow}T_{\uparrow} + S_{\downarrow}T_{\downarrow} \right) \sum^{8}_{M=1}P_M
+\label{eq:I_0}
+\end{equation}
+
+The elastic magnetoresistive contribution:
+\begin{equation}
+I_{MR}=\dfrac{e}{4} A_0 \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\rho_S\rho_T \left( S_{\uparrow}T_{\uparrow} - S_{\downarrow}T_{\downarrow} \right) 2\zeta \sum^{8}_{M=1}P_M \textbf{S}_{z,ST}^{M,M}
+\label{eq:I_MR}
+\end{equation}
+
+And the inelastic contribution:
+\begin{equation}
+I_{in}=e A_0 \rho_S\rho_T \zeta^{2} \sum_{M=1}^{8}  P_M \left( \mathcal{F}^{ST}(U+\Delta E_{M,M^{\prime}})
+S_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,ST}^{M,M^{\prime}}\rvert +  S_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,ST}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}T_{\uparrow}+S_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,ST}^{M,M^{\prime}}\rvert \right)
+\label{eq:I_in}
+\end{equation}
+
+As mentioned above, some of the unknown constants in the rate equations can be inferred from experimental conditions. We define the quantity  $A'_{o}$:
+\begin{equation}
+A'_{o}= \dfrac{A_{o} \rho_S\rho_T}{Tun_S\cdot Tun_T} = \dfrac{4I_0}{e\cdot Tun_S\cdot Tun_T\cdot \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\left( S_{\uparrow}T_{\uparrow} + S_{\downarrow}T_{\downarrow} \right)}
+\label{eq:el_rate}
+\end{equation} 
+where $Tun_{S} = \rho_{S} \nu^{2}_{S}$ and $Tun_{T} = \rho_{T} \nu^{2}_{T}$. These quantities describe the surface-adatom and tip-adatom coupling and determine the relative strengths of surface-surface and tip-tip scattering processes. They are free parameters within our model, however, $Tun_{S}$ remains fixed for all tip distances and $Tun_{T}$ decays exponentially with increasing tip-adatom distance. Additionally, it is reasonable to assume the ratio of $Tun_{T} / Tun_{S}$ should be less than 1. The quantity $A'_{o}$ is constant for all set currents and biases. In the present case the inelastic current is three orders of magnitude lower than the elastic contribution. We therefore neglect the inelastic contribution and equate the STM set current to $I_{o}$. The tunneling bias $U$ is known, and reasonable assumptions about the tip and surface polarizations $S_{\uparrow/\downarrow}$ and $T_{\uparrow/\downarrow}$ can be made. Finally, we can write the scattering rates for each possible initial and final electrode as:
+
+\begin{equation}
+W_{M,M^{\prime}}^{S \rightarrow T}=A'_{o}\cdot\zeta^2\cdot Tun_S\cdot Tun_T\cdot \left( \mathcal{F}^{ST}(U+\Delta E_{M,M^{\prime}})\;S_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,ST}^{M,M^{\prime}}\rvert +  S_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,ST}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}T_{\uparrow}+S_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,ST}^{M,M^{\prime}}\rvert \right)
+\end{equation}
+
+\begin{equation}
+W_{M,M^{\prime}}^{S \rightarrow S}=A'_{o}\cdot\zeta^2\cdot Tun_S^2\cdot \left( \mathcal{F}^{SS}(\Delta E_{M,M^{\prime}})\;S_{\downarrow}S_{\uparrow} \lvert \textbf{S}_{+,SS}^{M,M^{\prime}}\rvert +  S_{\uparrow}S_{\downarrow} \lvert {\textbf{S}_{-,SS}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}S_{\uparrow}+S_{\downarrow}S_{\downarrow}  \right) \lvert \textbf{S}_{z,SS}^{M,M^{\prime}}\rvert \right)
+\end{equation}
+
+\begin{equation}
+W_{M,M^{\prime}}^{T \rightarrow T}=A'_{o}\cdot \zeta^2\cdot Tun_T^2\cdot\left( \mathcal{F}^{TT}(\Delta E_{M,M^{\prime}})\;T_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,TT}^{M,M^{\prime}}\rvert +  T_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,TT}^{M,M^{\prime}}}\rvert +\left( T_{\uparrow}T_{\uparrow}+T_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,TT}^{M,M^{\prime}}\rvert \right)
+\end{equation}
+
+\bibliographystyle{unsrt}
+\bibliography{bib.bib}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
