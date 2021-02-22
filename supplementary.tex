@@ -12,10 +12,10 @@
 \title{Supplementary Material\\Spin dynamics in single Dy adatoms on graphene/Ir(111)
 studied by SP-STM}
 
-\author{D. Sblendorio}
+\author{A. Curcella}
 \affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
 
-\author{A. Curcella}
+\author{D. Sblendorio}
 \affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
 
 \author{S. Rusponi}
@@ -31,9 +31,110 @@ studied by SP-STM}
 \affiliation{Institute of Physics, Ecole Polytechnique Fédérale de Lausanne, CH-1015 Lausanne, Switzerland}
 
 \maketitle
+\section{Experimental Details}
+\subsection{Sample Preparation}
+We performed all measurements with a home-built STM \citep{Gaisch1992} operating at 6.5~K (barring the variable temperature measurements) and below \textit{p} $= 10^{-10}$ mbar. A sample preparation chamber sits adjacent to the STM, connected via a UHV transfer stage to allow sample placement into the STM. Before graphene growth, the Ir(111) single crystal is subject to repeated Ar+ sputtering and annealing (1400~K) cycles. A single layer of graphene is grown by chemical vapor deposition (CVD) by exposing the Ir(111) sample to 100 Langmuir of ethylene at 1400~K. The sample is transferred into the STM where Dy atoms are deposited from high purity rods (99.9\%) with an e-beam evaporator at 10~K.
+\subsection{Tip Preparation}
+We employ antiferromagnetic Mn$_{88}$Ni$_{12}$ tips in all SP-STM measurements. These are produced following the procedures described in Ref. \citep{Forrester2018}, where commercially available 0.25 mm thick Mn$_{88}$Ni$_{12}$ foil is cut into rods, electrochemically etched, then sputtered with Ar+ ions once in an ultra-high vacuum environment before being placed in the STM for use.
+\subsection{Telegraph Signal Noise Trace Methodology}
+TSN traces are taken with the STM feedback loop open, such that the absolute tip-adatom distance remains fixed (neglecting any drift), and initialized in the low conductance state. As pictured in Fig.~2c, the low conductance current typically corresponds to the the current set point before the feedback loop is opened (10 pA in the variable bias and variable temperature dataset). The adatom is free to switch between the low conductance and high conductance state. The true scattering rate due to the tunneling electrons then, is reflected by the average current of each trace. This average current is calculated for each trace and used as $I_o$ in the model. On the other hand, the $\Delta Z$ pictured in Fig. 2 of the main text is determined by the initial current set point and any thermal drift that occurs during the trace acquisition. We therefore use the average low conductance current $I_{LC}$ in the calculation of $\Delta Z$ (see Sec. \ref{sec:cond-dist}). Tables \ref{table:temp} - \ref{table:curr} contains the average current for each data set used in the main text.  
+\begin{table}[h!]
+\parbox{.2\linewidth}{}
+\hfill
+\parbox[b]{.2\linewidth}{
+\centering
+\begin{tabular}{|c|c|}
+ \hline
+ T (K) & $I_{avg}$ (pA) 
+ \\ [1ex] 
+ \hline 
+ \hline 
+ 6.5 & 11.4 \\
+ \hline
+ 6.8 & 12.2 \\
+ \hline
+ 7.3 & 11.8 \\
+ \hline
+  7.7 & 11.8 \\
+ \hline
+  8.1 & 12.3 \\
+ \hline
+  8.5 & 10.8 \\
+ \hline
+  8.8 & 11.2 \\
+ \hline
+\end{tabular}
+\caption{Average currents in variable temperature dataset.}
+\label{table:temp}
+}
+\hfill
+\parbox[b]{.2\linewidth}{
+\centering
+\begin{tabular}{|c|c|}
+ \hline
+ $V_{b}$ (mV) & $I_{avg}$ (pA) 
+ \\ [1ex] 
+ \hline 
+ \hline 
+ ±1 & 12.4 \\
+ \hline
+ ±2 & 14.1 \\
+ \hline
+ ±4 & 16.2 \\
+ \hline
+ $-$6 & 16.5 \\
+ \hline
+  ±8 & 17.3 \\
+ \hline
+\end{tabular}
+\caption{Average currents in variable bias dataset.}
+}
+\label{table:bias}
+\hfill
+\parbox[b]{.2\linewidth}{
+\centering
+\begin{tabular}{|c|c|}
+ \hline
+ $I_{LC}$ (pA) & $I_{avg}$ (pA) 
+ \\ [1ex] 
+ \hline 
+ \hline 
+ 2.6 & 3.9 \\
+ \hline
+ 5.3 & 7.4 \\
+ \hline
+ 9.1 & 14.1 \\
+ \hline
+ 11.8 & 13.9 \\
+ \hline
+ 24.5 & 28.9 \\
+ \hline
+ 27.6 & 46.9 \\
+ \hline
+ 46.9 & 53.0 \\
+ \hline
+ 58.9 & 93.0 \\
+ \hline
+ 88.9 & 104.1 \\
+ \hline
+ 101.7 & 160.8 \\
+ \hline
+ 179.5 & 217.7 \\
+ \hline 
+ 354.9 & 422.0 \\
+ \hline 
+ 687.2 & 815.8 \\
+ \hline
+\end{tabular}
+\caption{Average currents in variable current dataset.}
+\label{table:curr}
+}
+\hfill
+\parbox{.2\linewidth}{}
+\end{table}
 
 \section{State Lifetimes}
-The lifetimes of the high conductance state $\tau_{h}$ and low conductance state $\tau_{l}$ can be simultaneously described by a new quantity, which we define as $\tau^{*}$ \citep{Khajetoorians2013}. Let the index $i=\ket{l}$, $\ket{h}$ indicate the low and high conductance states, respectively. The index $\overline{i}$, then indicates the opposite magnetization state. The probability of switching from $ i$ to $\overline{i} $ at time $t$ is given by $ p_{i \overline{i}} $, while the probability of remaining in the same state is given by $ p_{ii} $. We neglect any transient state such that: $ p_{i\overline{i}} + p_{ii} = 1$. The time evolution of $ p_{ii} $ in an infinitesimal time range $dt$ is given by:
+The lifetimes of the high conductance state $\tau_{HC}$ and low conductance state $\tau_{LC}$ can be simultaneously described by a new quantity, which we define as $\tau^{*}$ \citep{Khajetoorians2013}. The indexes $i,\overline{i}$=LC, HC (with $i\neq \overline{i}$), indicate the low (LC) and high (HC) conductance states. The probability of switching from $ i$ to $\overline{i} $ at time $t$ is given by $ p_{i \overline{i}} $, while the probability of remaining in the same state is given by $ p_{ii} $. We neglect any transient state such that: $ p_{i\overline{i}} + p_{ii} = 1$. The time evolution of $ p_{ii} $ in an infinitesimal time range $dt$ is given by:
 
 \begin{equation}
 p_{ii}(t+dt)=p_{i\overline{i}}(t)\frac{dt}{\tau_{\overline{i}}}+p_{ii}(t)\left( 1-\frac{dt}{\tau_i} \right)=(1-p_{ii}(t))\frac{dt}{\tau_{\overline{i}}}+p_{ii}(t)\left( 1-\frac{dt}{\tau_i} \right)=p_{ii}(t)+\frac{dt}{\tau_{\overline{i}}}-p_{ii}(t)\frac{dt}{\tau^*}
@@ -52,12 +153,57 @@ p_{ii}(t)=\frac{\tau^*}{\tau_{\overline{i}}}-\exp(-\frac{t}{\tau^{*}})c_1\righta
 \label{eq:sol_diff}
 \end{equation}
 
-The condition $p_{ii}(0)=1$ determines the value of the constant $c_1=\frac{\tau^{*}}{\tau_i}$.Note that Eq.~\ref{eq:diff_p} is completely independent of the initial state $i$. Thus, the new quantity $\tau^{*}$ governs the time evolution of both $\ket{l}$ and $\ket{h}$ state. The factors $\frac{\tau^{*}}{\tau_{\overline{i}}} $ and $ \frac{\tau^{*}}{\tau_{i}} $ are the occupancy of the state $\overline{i}$ and $i$, respectively. These quantities can be measured experimentally from the telegraph-noise traces.  
+The condition $p_{ii}(0)=1$ determines the value of the constant $c_1=\frac{\tau^{*}}{\tau_i}$. Note that Eq.~\ref{eq:diff_p} is completely independent of the initial state $i$. Thus, the quantity $\tau^{*}$ governs the time evolution of both LC and HC states. The factors $\frac{\tau^{*}}{\tau_{\overline{i}}} $ and $ \frac{\tau^{*}}{\tau_{i}} $ are the occupancy of the state $\overline{i}$ and $i$, respectively. These quantities can be measured experimentally from the telegraph signal noise (TSN) traces.  
 
+\section{Model Hamiltonian}
+We use a Hamiltonian of the following form
+\begin{equation}
+\mathcal{H} = \mathcal{H}_{intra} + \mathcal{H}_{Z} + \mathcal{H}_{CF}  + \mathcal{H}_{ph} + \mathcal{H}_{te}
+\end{equation}
+The first term describes the intra-atomic exchange between the partially filled \textit{6s}, \textit{5d}, and \textit{4f} shells. This term is the primary novelty of our model and it stems from the recent observation that the external \textit{6s} and \textit{5d} shells are polarized and only partially filled \cite{pivettaMeasuringIntraAtomicExchange2020}. Consequently, the interaction between shells is proportional to the spin component of each shell and can be quantified as:
+\begin{equation}
+\mathcal{H}_{intra} =\sum_{i\neq j} A_{ij} \, \hat{S}_{i} \cdot \hat{S}_{j} , \;\;\;\;\;\; i,j = 4f, 5d, 6s
+\end{equation}
+The magnitude of the exchange between each shell $A_{ij}$ are taken from DFT calculations \cite{Delin1997,pivettaMeasuringIntraAtomicExchange2020}. These values are scaled according the occupation of each shell, such that they are consistent with the experimental observations of the exchange breaking between the \textit{4f} shell and \textit{5d6s} shells. The second term is the Zeeman term, describing the influence of a stray magnetic field from the STM tip on the Dy adatom. We consider both an axial $B^{tip}_z$ and transverse $B^{tip}_x$ field component, kept as free parameters, acting on each shell $i$:
+\begin{equation}
+\mathcal{H}_{Z} = \mu_{B} B^{tip}_z  \sum_{i} g_{i} \hat{S}_{zi} + \mu_{B} B^{tip}_x  \sum_{i} g_{i} \hat{S}_{xi}
+\label{eq:zeeman}
+\end{equation}
+where $g$ is an effective \textit{g}-factor for each shell. We use 1.25, 0.27, and 0.27 for the \textit{4f}, \textit{5d}, and \textit{6s} shells \cite{pivettaMeasuringIntraAtomicExchange2020}. The effects of the crystal field are described by the third term. Due to the sixfold symmetry of the adsorption site, this term can be expressed as the sum of four Stevens operators $\hat{O}^{n}_{m}$ \cite{baltic2016, Stevens_1952}:
+\begin{equation}
+\mathcal{H}_{CF} = B^{2}_{0} \hat{O}^{2}_{0} + B^{4}_{0} \hat{O}^{4}_{0} + B^{6}_{0} \hat{O}^{6}_{0} + B^{6}_{6} \hat{O}^{6}_{6}
+\end{equation}
+where the parameters $B^{2}_{0}$, $B^{4}_{0}$, and $B^{6}_{0}$ determines the total zero field splitting and $B^{6}_{6}$ determines the mixing of the magnetic states. The \textit{4f} model values have been taken from Ref.\cite{baltic2018} while the \textit{4f5d6s} model values are slightly adjusted to take into account the additional spin of the \textit{6s} and \textit{5d} shells. These values are listed in Table~\ref{table:CF}. 
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c||c|c|c|c|}
+ \hline
+ Model & $B^{0}_{2}$ ($\mu$eV) & $B^{0}_{4}$ (neV) & $B^{0}_{6}$ (neV) & $B^{6}_{6}$ (neV) 
+ \\ [1ex] 
+ \hline 
+ \hline 
+ \textit{4f} & -121 & 100 & 1.5 & 0.3 \\
+ \hline
+  \textit{4f5d6s} & -136 & 17.5 & 2.45 & -5 \\
+ \hline
+ \end{tabular}
+ \caption{CF Parameter Values}
+ \label{table:CF}
+\end{table}
+In both cases, these values are fixed by the size and location of the steps in the XMCD magnetization curves at ±2.7 T and ±5.6 T, which indicate the presence of QTM processes due to level crossings in the energy level diagram. In the \textit{4f} model, the step at +2.7 T is attributed to the crossing between $\ket{7}$ and $\ket{-8}$, mixed due to a small $B^{3}_{6} \hat{O}^{3}_{6}$ term not included in $\mathcal{H}_{CF}$. The step at ±5.6 T is attributed to the crossing between $\ket{7}$ and $\ket{-6}$. Magnetization reversal occurs via QTM through $\ket{\pm 6}$, mediated by electron or phonon scattering in the substrate \cite{baltic2018,baltic2016}. In the \textit{4f5d6s} model, the direct mixing between $\ket{m_7}$ and $\ket{m_{-8}}$ and $\ket{m_7}$ and $\ket{m_{-6}}$ can be explained by considering half of the isotopes of Dy (44$\%$ natural abundance) have nuclear spin $I = 5/2$. The basis $\ket{m_i}=\ket{j_{4f},s_{5d},s_{6s}}$ becomes $\ket{j_{4f},s_{5d},s_{6s},I}$ where $I$ can take on values $-5/2$,$-3/2$, $-1/2$, $+1/2$, $+3/2$, and $+5/2$. The crystal field now mixes the states with $\Delta M_{tot}=\Delta j_{4f} + \Delta s_{5d} + \Delta s_{6s} + \Delta I=6n$, $n\in \mathbb{N}$. Since the multiplicity of $I$ is equal to the symmetry of the crystal field, a level crossing exists between each state $\ket{-8,-0.5,-0.5,I}$ and $\ket{7,0.5,0.5,I^\prime}$ for some $I \ne I^\prime$. The same is true for states $\ket{-6,-0.5,-0.5,I}$ and $\ket{7,0.5,0.5,I^\prime}$ for some $I \ne I^\prime$. The magnitude of $B^{6}_{6}$ is tuned to obtain the same effective level splitting ($10^{−7}$ meV) obtained by applying the Landau−Zener model to the observed magnetization step at +2.7 T \cite{baltic2016, zener1932}. Experimentally, we do not observe any difference between adsorbed Dy adatoms (i.e two species with and without nuclear spin), and therefore conclude that the nuclear spin has no significant influence on the spin dynamics presently studied. \par
+We treat the first three terms as the unperturbed Hamiltonian. The fourth term is a perturbation due to spin-phonon coupling that occurs between the Dy adatom and the graphene \cite{cervetti2016,fort1998}. We utilize a Hamiltonian term of the form:
+\begin{equation}
+\mathcal{H}_{ph} = \hat{S}^{2}_{-} + \hat{S}^{2}_{+ } + 2 {\hat{S}_{-},\hat{S}_{z}} + 2 {\hat{S}_{+},\hat{S}_{z}}
+\label{eq:ph}
+\end{equation}
+where the expression {,} denotes the anticommutator between the two operators. The third and fourth term account for first order transitions ($\Delta S = \pm 1$) and the first and second term account for second order transitions ($\Delta S = \pm 2$). Note that the phonons act only on the \textit{4f} shell of the Dy adatom; the spin operators in Eq. (\ref{eq:ph}) are of the \textit{4f} shell. The phonon scattering rates associated to a Hamiltonian of this form are discussed further in Section \ref{phonon}. The final term describes the perturbation of the tunneling electrons on the outer \textit{6s} shell. Consistent with previous models \cite{anderson1966,schrieffer1966,appelbaum1967,delgado2010,loth2010,Ternes2015}, we use a Kondo-type Hamiltonian where the tip and substrate electrons are treated as reservoirs:  
+\begin{equation}
+\mathcal{H}_{te} = \sum_{\alpha,\lambda, \lambda',\sigma,\sigma'} T_{\alpha,\lambda, \lambda'} \frac{\tau^{(\alpha)}_{\sigma\sigma'}}{2} \hat{S}_{\alpha} c^{\dagger}_{\lambda\sigma} c_{\lambda'\sigma'}
+\end{equation}
+where $\alpha$ can take on values of $x, y, z$ and $0$. $\lambda = (k,\eta)$ defines the single particle state $k$ in the electrode $\eta$ together with the spin $\sigma$ of the transport electrons. $\tau^{(\alpha)}$ and $\hat{S}_{\alpha}$ correspond to the Pauli matrices and spin operators, respectively. For $\alpha = 0$, $\tau^{(0)}$ is defined as the identity matrix, and $T_{o}$ is the Coulomb potential scattering interaction parameter. For $\alpha = x, y,$ and $z$, $T_{\alpha}$ corresponds to the exchange-tunneling interaction parameter between the tunneling electrons and the \textit{6s} shell of the Dy adatom. As STM primarily relies primarily on tunneling through the external shells of a target atom due to the exponential dependence of tunneling, the exchange coupling that occurs between the \textit{4f} and external \textit{5d} ,\textit{6s} shells enables the reading of the magnetic state of the \textit{4f} shell via a high spin dependent magnetoresistance current \cite{pivettaMeasuringIntraAtomicExchange2020}.\par
 
-\section{Description of scattering rates and tunneling current}
-
-For the description of the scattering rates and tunneling current we follow the formalism presented by Delgado \textit{et al.}~\cite{delgado2010}. The STM current can be written as:
+\section{Description of scattering rates}
+For the description of the electron scattering rates and tunneling current we follow the formalism presented by Delgado \textit{et al.}~\cite{delgado2010}. The STM current can be written as:
 
 \begin{equation}
 I_{S\rightarrow T} = e \sum_{M,M^{\prime}}P_M(U)\left(W_{M,M^{\prime}}^{S\rightarrow T}-W_{M,M^{\prime}}^{T\rightarrow S}\right)
@@ -70,78 +216,119 @@ Where $P_M(U)$ are the steady state solutions for each state $M$ of the master e
 \dfrac{dP_M}{dt}=\sum_M P_{M^{\prime}}W_{M^{\prime},M} - P_M\sum_{M^{\prime}}W_{M,M^{\prime}}
 \end{equation}
 
-$P_M$ are the diagonal elements of the density matrix expressed in the basis of eigenstates $\ket{M}$ of the unperturbed Hamiltonian. In our model, we treat the phonon and tunneling electron Hamiltonian terms as the perturbations. We initialize the master equation by populating the lowest eigenstate $\ket{M}$ at unity ($P_M = 1$). We let the system evolve under the transition rates $W_{M,M^{\prime}}$ (which consider all possible transitions between all electrodes), until steady state solutions for $P_M$ are obtained. This allows for the determination of $\tau^{*}$, $\tau_i$, and $\tau_{\overline{i}}$.   
-To obtain expression for the transition rates in the master equation, we consider the electrodes $\eta$, $\eta^{\prime} \in\lbrace S=surface, T=tip\rbrace$. As is shown in \cite{delgado2010}, a simplified expression for the rates is:
+$P_M$ are the diagonal elements of the density matrix expressed in the basis of eigenstates $\ket{M}$ of the unperturbed Hamiltonian. In our model, we treat the phonon and tunneling electron Hamiltonian terms as the perturbations. We initialize the master equation by populating the lowest eigenstate $\ket{M}$ at unity ($P_M = 1$). We let the system evolve under the transition rates $W_{M,M^{\prime}}$ (which consider all possible transitions between all electrodes), until steady state solutions for $P_M$ are obtained. This allows for the determination of $\tau^{*}$, $\tau_i$, and $\tau_{\overline{i}}$. 
+
+\subsection{Electron scattering rates}
+To obtain expression for the electron-induced transition rates in the master equation, we consider the electrodes $\eta$, $\eta^{\prime} \in\lbrace S=surface, T=tip\rbrace$. As is shown in \cite{delgado2010}, a simplified expression for the rates is:
 
 \begin{equation}
-W_{M,M^{\prime}}^{\eta \rightarrow \eta^{\prime}}=A_0 \mathcal{F}^{\eta\eta^{\prime}}(U+\Delta E_{M,M^{\prime}})\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}
+W_{M,M^{\prime}}^{\eta \eta^{\prime}}=\frac{2 \pi}{\hbar} T_o^2 \nu_T^2 \nu_S^2 \mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}} + V_{\eta \eta^{\prime}})\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}
 \label{eq:scatt_rates}
 \end{equation}
 
-where $A_0$ is a grouping of constants discussed below, $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ are the quantum rates determined by the off-diagonal terms in the density matrix, and  $\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm U )$ is the Fermi-Dirac term to account for the occupation probability of each state:
+where $T_{o}$ is the Coulomb potential scattering interaction parameter, and $\nu_T$ and $\nu_S$ are proportional to the tip-adatom and adatom-surface hopping integrals. 
+$\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ are the rates determined by the terms in the density matrix, and $\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm V_b )$ is the Fermi-Dirac term to account for the occupation of each state:
 
 \begin{equation}
-\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm U )=\dfrac{\Delta E_{M,M^{\prime}}\pm U}{exp\left[\left( \Delta E_{M,M^{\prime}}\pm U  \right)\beta\right]-1}
+\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}} )=\dfrac{\Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}}{exp\left[\left( \Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}  \right)\beta\right]-1}
 \label{eq:fermi_conv}
 \end{equation}
 
-in which $\Delta E_{M,M^{\prime}}$ is the energy difference between energy levels $\ket{M}$ and $\ket{M^{\prime}}$, $U$ is the bias between tip and sample, and $\beta=1/k_b T$. We group constants into $A_0$ in Eq.~\ref{eq:scatt_rates}. These constants are dependent on unknown quantities such as the tip-adatom, surface-adatom coupling and the strength of the elastic channel. Our strategy for determining these quantities is to group and solve for them using know experimental conditions if possible, otherwise we leave them as free parameters within the model. This is discussed further below. 
-
-The quantum rates $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ of Eq.~\ref{eq:scatt_rates} are explicitly written as:
+in which $\Delta E_{M,M^{\prime}}$ is the energy difference between energy levels $\ket{M}$ and $\ket{M^{\prime}}$, $V_{\eta \eta^{\prime}}$ is the potential difference between electrode $\eta$ and $\eta^{\prime}$, and $\beta=1/k_b T$. The rates $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ of Eq.~\ref{eq:scatt_rates} are explicitly written as:
 
 \begin{equation}
-\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}=\dfrac{1}{4}\delta_{M,M^{\prime}}\left[  \mathcal{R}^{+}(\eta\eta^{\prime})+ 2\zeta \mathcal{R}^{-}(\eta\eta^{\prime})\textbf{S}_{z,\eta\eta^{\prime}}^{M,M^{\prime}}  \right] + \zeta^{2}\left[ \rho_\eta \rho_\eta^{\prime} \eta_{\downarrow}\eta^{\prime}_{\uparrow} \lvert \textbf{S}_{+,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert + \rho_\eta \rho_\eta^{\prime} \eta_{\uparrow}\eta^{\prime}_{\downarrow} \lvert {\textbf{S}_{-,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert +\mathcal{R}^{+}(\eta\eta^{\prime}) \lvert \textbf{S}_{z,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert \right]
-\label{eq:yota_contr} 
+\label{eq:ups} 
+    \Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}=\dfrac{\delta_{M,M^{\prime}}}{4}\left[  \mathcal{R}^{+}(\eta\eta^{\prime})+ 2\zeta \mathcal{R}^{-}(\eta\eta^{\prime})\langle \hat{S}_{z,\eta\eta^{\prime}} \rangle \right] + \zeta^{2}\left[ \rho_{\eta \downarrow} \rho_{\eta^{\prime}\uparrow} \lvert \hat{S}_{+,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert^{2} + \rho_{\eta \uparrow} \rho_{\eta^{\prime}\downarrow} \lvert {\hat{S}_{-,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2} +\mathcal{R}^{+}(\eta\eta^{\prime})\lvert \hat{S}_{z,\eta\eta^{\prime}}^{M,M^{\prime}}\rvert^{2} \right]
 \end{equation}
 
-This expression can be interpreted as three forms of scattering rates: elastic, elastic magnetoresistive, and inelastic. Between the first pair of square brackets we find the elastic contributions, as $\delta_{M,M^{\prime}}$ implies. The second square-bracketed terms represent the inelastic contribution.
-The second term of the elastic component describes the magnetoresistive contribution. Note that only the scattering rates between tip and sample, i.e. $\eta\neq\eta^{\prime}$, contribute to the current. However, tip-to-tip and sample-to-sample scattering events, i.e. $\eta=\eta^{\prime}$, contribute to the global  rate. $\rho_{\eta}$ represents the density of state at Fermi in the electrode $\eta$; $\eta_{\uparrow / \downarrow}$ is the fraction of electrons in the up or down state in electrode $\eta$. The term $\zeta$ in Eq.~\ref{eq:yota_contr} represents the ratio between inelastic and elastic tunnel matrix elements, and is left as a free parameter within our model. 
+The terms are separated into elastic and inelastic scattering. Between the first pair of square brackets we find the elastic contributions, as $\delta_{M,M^{\prime}}$ implies. The second square-bracketed terms represent the inelastic contribution.
+The second term of the elastic component describes the magnetoresistive contribution. Note that only the scattering rates between tip and sample, i.e. $\eta\neq\eta^{\prime}$, contribute to the current. However, tip-to-tip and sample-to-sample scattering events, i.e. $\eta=\eta^{\prime}$, contribute to the global rate. $\rho_{\eta}$ is the density of states at Fermi in the electrode $\eta$; $\eta_{\uparrow / \downarrow}$ is the fraction of electrons in the up or down state in electrode $\eta$. The term $\zeta$ is defined as the ratio of the exchange-tunneling interaction parameter $T_{\alpha}$, for $\alpha = x, y,$ and $z$, and the Coulomb potential scattering interaction parameter $T_{o}$. This ratio is proportional to the ratio between inelastic and elastic tunnel matrix elements, and is left as a free parameter within our model. 
 
 The two terms $\mathcal{R}^{+}$ and $\mathcal{R}^{-}$ are defined as:
-
 \begin{equation}
-\mathcal{R}^{\pm}(\eta\eta^{\prime})=\rho_\eta\rho_{\eta^{\prime}}\left( \eta_{\uparrow}\eta^{\prime}_{\uparrow} \pm \eta_{\downarrow}\eta^{\prime}_{\downarrow} \right)
-\label{eq:R_+-}
+    \mathcal{R}^{\pm}(\eta\eta^{\prime})=\left( \rho_{\eta \uparrow} \rho_{\eta^{\prime}\uparrow} \pm \rho_{\eta \downarrow} \rho_{\eta^{\prime}\downarrow} \right)
+    \label{eq:R_+-}
 \end{equation}
 
-Combining equations (\ref{eq:stm_curr}) and (\ref{eq:R_+-}) allows us to obtain expression for the three corresponding contributions to the current, imposing $\eta \neq \eta^{\prime} $.
-The first elastic contribution:
+It is possible to simplify (\ref{eq:scatt_rates}) and (13) to obtain the expression for the inelastic scattering rates used in the main text:
+
 \begin{equation}
-I_0=\dfrac{e}{4} A_0 \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\rho_S\rho_T \left( S_{\uparrow}T_{\uparrow} + S_{\downarrow}T_{\downarrow} \right) \sum^{8}_{M=1}P_M
+    W_{MM^{\prime}}^{\eta \eta^{\prime}}=\dfrac{2\pi}{\hbar} \zeta^2 \varsigma_{\eta} \varsigma_{\eta^{\prime}} \mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}+V_{\eta \eta^{\prime}} )  w_{MM^{\prime}}^{\eta \eta^{\prime}},
+    \label{eq:elec_rates}
+\end{equation}
+
+ $w_{MM^{\prime}}^{\eta \eta^{\prime}} = \sum_{a} \rho_a \lvert {\textbf{S}_{a,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2}$ is the inelastic term in Eq. \ref{eq:ups} and $\varsigma_{\eta/\eta^{\prime}} = T_o \nu^2_{\eta/\eta^{\prime}}$. Eq. (13) also allows us to obtain expression for the three corresponding contributions to the current by imposing $\eta \neq \eta^{\prime} $.
+The elastic contribution:
+\begin{equation}
+I_0=\dfrac{e}{4} \dfrac{2\pi}{\hbar}  \varsigma_{S} \varsigma_{T} \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)
 \label{eq:I_0}
 \end{equation}
 
 The elastic magnetoresistive contribution:
 \begin{equation}
-I_{MR}=\dfrac{e}{4} A_0 \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\rho_S\rho_T \left( S_{\uparrow}T_{\uparrow} - S_{\downarrow}T_{\downarrow} \right) 2\zeta \sum^{8}_{M=1}P_M \textbf{S}_{z,ST}^{M,M}
+I_{MR}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T}  2 \zeta  \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} - \rho_{S \downarrow} \rho_{T\downarrow} \right) \langle \hat{S}_{z,\eta\eta^{\prime}} \rangle
 \label{eq:I_MR}
 \end{equation}
 
 And the inelastic contribution:
 \begin{equation}
-I_{in}=e A_0 \rho_S\rho_T \zeta^{2} \sum_{M=1}^{8}  P_M \left( \mathcal{F}^{ST}(U+\Delta E_{M,M^{\prime}})
-S_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,ST}^{M,M^{\prime}}\rvert +  S_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,ST}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}T_{\uparrow}+S_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,ST}^{M,M^{\prime}}\rvert \right)
+I_{in}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T} \zeta^2  \left( \mathcal{F}^{ST}(\Delta E_{M,M^{\prime}}+V_{ST})-\mathcal{F}^{TS}(\Delta E_{M,M^{\prime}}+V_{TS}) \right) \sum_{a} \rho_a \lvert {\hat{S}_{a,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2}
 \label{eq:I_in}
 \end{equation}
 
-As mentioned above, some of the unknown constants in the rate equations can be inferred from experimental conditions. We define the quantity  $A'_{o}$:
+Since the elastic contribution is orders of magnitude larger than the inelastic contribution, we take the average tunneling current $I_{avg}$ as equal to $I_{o}$. Treating $\zeta$ and $\varsigma_{S}$ as free parameters, and choosing reasonable values for $\rho_T$, allows us to solve for $\varsigma_{T}$ for the experimentally-known tunneling bias and current:
+
 \begin{equation}
-A'_{o}= \dfrac{A_{o} \rho_S\rho_T}{Tun_S\cdot Tun_T} = \dfrac{4I_0}{e\cdot Tun_S\cdot Tun_T\cdot \left( \mathcal{F}^{ST}(U)-\mathcal{F}^{TS}(U) \right)\left( S_{\uparrow}T_{\uparrow} + S_{\downarrow}T_{\downarrow} \right)}
+\varsigma_{T} =  \dfrac{4 \hbar I_0}{2 e \pi \varsigma_{S} \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right)\left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)}
 \label{eq:el_rate}
 \end{equation} 
-where $Tun_{S} = \rho_{S} \nu^{2}_{S}$ and $Tun_{T} = \rho_{T} \nu^{2}_{T}$. These quantities describe the surface-adatom and tip-adatom coupling and determine the relative strengths of surface-surface and tip-tip scattering processes. They are free parameters within our model, however, $Tun_{S}$ remains fixed for all tip distances and $Tun_{T}$ decays exponentially with increasing tip-adatom distance. Additionally, it is reasonable to assume the ratio of $Tun_{T} / Tun_{S}$ should be less than 1. The quantity $A'_{o}$ is constant for all set currents and biases. In the present case the inelastic current is three orders of magnitude lower than the elastic contribution. We therefore neglect the inelastic contribution and equate the STM set current to $I_{o}$. The tunneling bias $U$ is known, and reasonable assumptions about the tip and surface polarizations $S_{\uparrow/\downarrow}$ and $T_{\uparrow/\downarrow}$ can be made. Finally, we can write the scattering rates for each possible initial and final electrode as:
+This is advantageous as we expect $\varsigma_{T}$ to depend on the tip-adatom distance defined by the tunneling conditions, while $\zeta$ and $\varsigma_{S}$ are fixed.  
 
+\subsection{Phonon scattering rates}
+\label{phonon}
+In addition to electron scattering, we also consider phonon absorption and relaxation between the graphene and Dy adatom. We assume a 2D phononic bath are determined by the magnitude of the rate prefactors \cite{cervetti2016,fort1998}: 
 \begin{equation}
-W_{M,M^{\prime}}^{S \rightarrow T}=A'_{o}\cdot\zeta^2\cdot Tun_S\cdot Tun_T\cdot \left( \mathcal{F}^{ST}(U+\Delta E_{M,M^{\prime}})\;S_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,ST}^{M,M^{\prime}}\rvert +  S_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,ST}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}T_{\uparrow}+S_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,ST}^{M,M^{\prime}}\rvert \right)
+R_{abs} =  \frac{3 \epsilon_{ph}}{2\sigma_{dy} \rho_{gr} c^4 \hbar^3} \frac{\Delta E_{M,M^{\prime}}^2}{e^{\beta \Delta E_{M,M^{\prime}}} - 1} 
 \end{equation}
 
 \begin{equation}
-W_{M,M^{\prime}}^{S \rightarrow S}=A'_{o}\cdot\zeta^2\cdot Tun_S^2\cdot \left( \mathcal{F}^{SS}(\Delta E_{M,M^{\prime}})\;S_{\downarrow}S_{\uparrow} \lvert \textbf{S}_{+,SS}^{M,M^{\prime}}\rvert +  S_{\uparrow}S_{\downarrow} \lvert {\textbf{S}_{-,SS}^{M,M^{\prime}}}\rvert +\left( S_{\uparrow}S_{\uparrow}+S_{\downarrow}S_{\downarrow}  \right) \lvert \textbf{S}_{z,SS}^{M,M^{\prime}}\rvert \right)
+R_{rel} =  \frac{3 \epsilon_{ph}}{2\sigma_{dy} \rho_{gr} c^4 \hbar^3} \left( 1 + \frac{\Delta E_{M,M^{\prime}}^2}{e^{\beta \Delta E_{M,M^{\prime}}} - 1}\right)
 \end{equation}
+\noindent
+where $\epsilon_{ph}$ is the absorption and relaxation efficiency of the Dy adatom, $\sigma_{dy}$ is the surface density of Dy relative to C density, $\rho_{gr}$ is the density of graphene, $c$ is the speed of sound in graphene, and $\beta = 1/ k_{b} T$. $\epsilon_{ph}$ is an additional free parameter in the model.\par
 
+\subsection{QTM rates}
+To obtain expressions for the QTM rates, we follow the formalism in Ref. \cite{abragam1961,fort1998}. The tunneling rate for 
 \begin{equation}
-W_{M,M^{\prime}}^{T \rightarrow T}=A'_{o}\cdot \zeta^2\cdot Tun_T^2\cdot\left( \mathcal{F}^{TT}(\Delta E_{M,M^{\prime}})\;T_{\downarrow}T_{\uparrow} \lvert \textbf{S}_{+,TT}^{M,M^{\prime}}\rvert +  T_{\uparrow}T_{\downarrow} \lvert {\textbf{S}_{-,TT}^{M,M^{\prime}}}\rvert +\left( T_{\uparrow}T_{\uparrow}+T_{\downarrow}T_{\downarrow}  \right) \lvert \textbf{S}_{z,TT}^{M,M^{\prime}}\rvert \right)
+W_{M,-M} =  \frac{2 \tau^{*}_{M} \omega^{2}_{o}}{1 + (\tau^{*}_{M} \omega_{1})^2}
+\label{eq:qtm}
 \end{equation}
+where $\tau^{*}_{M}$ is the characteristic lifetime of state $M$ in the absence of QTM, $\omega_{o} = \Delta E_{M,-M}/\hbar$ in zero field and $\omega_{1} = \Delta E_{M,-M}/\hbar$ in field. 
+\section{Conductance Distance Measurements and Tip Field}
+\label{sec:cond-dist}
+\begin{figure*}[ht!]
+\includegraphics[width=0.98\textwidth]{fields_fit2.pdf}
+\caption{Conductance Distance Measurements and Tip Field. \textbf{a}. Conductance distance measurements over 4 different Dy adatoms ($V_{b} = +2$ mV,$I_o = 10$ pA, $T = 6.5$ K). \textbf{b}. Tip field $B^{tip}$ values used in the polarized model to fit the experimental data. A simple fit (dashed) where $B^{tip} \sim 1/z^{3}$ + $e^{-z/d}$ is included for comparison. 
+\label{fig:fields} }
+\end{figure*}
+
+As the tip field $B^{tip}$ is unknown, we choose the value that best fits the experimental data. The Zeeman term in the Hamiltonian (Eq. \ref{eq:zeeman}) contains both an axial component $B^{tip}_z$ and transverse component $B^{tip}_x$ acting on each shell. The transverse component $B^{tip}_x$ has a negligible effect on the occupancy and the characteristic lifetime $\tau^{*}$; we therefore limit our discussion to the axial component such that $B^{tip} = B^{tip}_z$. 
+To better understand the distance dependence of $B^{tip}$, we performed conductance-distance measurements above the Dy adatoms. Fig.~\ref{fig:fields}a shows the results of these measurements over 4 different adatoms (A1-A4). A clear departure from the exponential behavior expected from electron tunneling occurs for $\Delta Z < -3$ \text{\normalfont\AA}. The simple exponential fit ($I(\Delta Z) = I_o e^{-\kappa \Delta Z}$) of the region $\Delta Z > -3$ \text{\normalfont\AA} reveals a decay constant $\kappa$ of 1.9. The decay constant allows us to map current and bias set points ($I_{s.p.}$ and $V_{b}$) from the variable bias (Tip 1 in Fig.~\ref{fig:fields}b) and variable current datasets (Tips 2 and 3 in Fig.~\ref{fig:fields}b) onto $\Delta Z$. Fig.~\ref{fig:fields}b shows the $B^{tip}$ needed to fit the experimental data at each current and bias set point ($I_{s.p.}$ and  $V_{b}$) as a function of $\Delta Z$. \par
+If we assume the tip field $B^{tip}$ is composed of a dipolar component ($\sim 1/z_o^{3}$) and an exchange component ($\sim e^{-z_o/d}$), where $z_o$ is the relative tip-adatom distance and $d$ is the exchange decay constant, a fit of $B^{tip}$ as a function of $\Delta Z$ can be made by restricting values for $z_o$, $B_{dip}$, $B_{exch}$, and $d$ for $\Delta Z = 0$. The fit in Fig.~\ref{fig:fields}b uses the following values: $z_o = 4.8$ \text{\normalfont\AA}, $B_{dip} = -60$ mT, $B_{exch} = 156$ mT, and $d = 1.5$ \text{\normalfont\AA}. Different goodness-of-fit can be achieved by changing these parameters. However, the difference in trends between this simple fit and the tip field $B^{tip}$ needed suggests a more complicated scaling. As nanoscale changes in the tip apex can change from measurement to measurement, we expect the tip field felt by the Dy adatom to change as well. Each tip in Fig.~\ref{fig:fields}b) consists of a single continuously acquired dataset where no observed changes in tip behavior occurred. While the fit assumes a simple dipolar and exchange scaling, the true tip field may have more complex scaling determined my the local tip geometry.
+
+\section{Variable Bias and Variable Current Results for the \textit{4f} Model}
+\begin{figure*}[h!]
+\includegraphics[width=0.98\textwidth]{model_4f.pdf}
+\caption{\textit{4f} Model. \textbf{a}. A reproduction of Fig. 4c with the \textit{4f} model (green) at 1 K and 6.5 K. For simplicity, a constant field is used at each bias.  \textbf{b}.
+\label{fig:bias_curr} }
+\end{figure*}
+
+At 6.5 K, there is an inappreciable difference between the \textit{4f} and \textit{4f5d6s} model in the state occupancy and lifetimes in the variable bias dataset (Fig. 4a-b) due to the temperature smearing of the transition pathways. In both cases, a set of free parameters exists that agrees with the experimental data reasonably well. However, if considering the occupancy at 1 K rather than 6.5 K the difference becomes more apparent. Fig.~\ref{fig:bias_curr}a compares the two models at 1 K and 6.5 K. At 1 K, the presence of the single transition pathway available in the \textit{4f} model is visible at at $|V_b|>5.5$ meV, while at $|V_b|<5.5$ meV, the asymmetry is primarily determined by the tip field $B^{tip}$. At higher temperature, the delineation between these two regimes is both spread across several meV and smoothed.   
+
+Fig.~\ref{fig:bias_curr}b compares the \textit{4f} and \textit{4f5d6s} model occupancy against the experimental current dependent measurements. While the \textit{4f5d6s} model exhibits the same trend as the measurements, the \textit{4f} model asymmetry increases with increasing current. The transition pathway with the lowest energy in the \textit{4f5d6s} model (through $\ket{m_{\pm 8}}$) results in a preferred low conductance state, producing the behavior seen in the high current regime. For the \textit{4f} model, the transition pathway with the lowest energy (through $\ket{\pm 6}$) results in a preferred high conductance state. Increasing the current therefore increases the strength of spin increasing processes that dominate tip-substrate scattering, and the preference for the high conductance state.  
+
+The most significant difference between the \textit{4f} and \textit{4f5d6s} model is the level schemes and the transition pathways allowed within each scheme. These differences manifest in the slope of the Arrhenius plot and in the high current regime of the variable current occupancy. While the free parameters used to fit the experimental data allow some flexibility, it is not possible to find a set of parameters within the \textit{4f} model that reproduce the experimental trends in these two cases. This emphasizes the importance of including the polarized \textit{5d6s} shell to model the spin dynamics of the Dy system.    
+
 
 \bibliographystyle{unsrt}
 \bibliography{bib.bib}
