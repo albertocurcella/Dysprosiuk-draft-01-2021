@@ -222,19 +222,19 @@ $P_M$ are the diagonal elements of the density matrix expressed in the basis of 
 To obtain expression for the electron-induced transition rates in the master equation, we consider the electrodes $\eta$, $\eta^{\prime} \in\lbrace S=surface, T=tip\rbrace$. As is shown in \cite{delgado2010}, a simplified expression for the rates is:
 
 \begin{equation}
-W_{M,M^{\prime}}^{\eta \eta^{\prime}}=\frac{2 \pi}{\hbar} T_o^2 \nu_T^2 \nu_S^2 \mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}} + V_{\eta \eta^{\prime}})\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}
+W_{M,M^{\prime}}^{\eta \eta^{\prime}}=\frac{2 \pi}{\hbar} T_o^2 \nu_T^2 \nu_S^2 \mathcal{F}_{\eta\eta^{\prime}}(E_{M,M^{\prime}} + V_{\eta \eta^{\prime}})\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}
 \label{eq:scatt_rates}
 \end{equation}
 
 where $T_{o}$ is the Coulomb potential scattering interaction parameter, and $\nu_T$ and $\nu_S$ are proportional to the tip-adatom and adatom-surface hopping integrals. 
-$\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ are the rates determined by the terms in the density matrix, and $\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}\pm V_b )$ is the Fermi-Dirac term to account for the occupation of each state:
+$\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ are the rates determined by the terms in the density matrix, and $\mathcal{F}_{\eta\eta^{\prime}}(E_{M,M^{\prime}}\pm V_b )$ is the Fermi-Dirac term to account for the occupation of each state:
 
 \begin{equation}
-\mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}} )=\dfrac{\Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}}{exp\left[\left( \Delta E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}  \right)\beta\right]-1}
+\mathcal{F}_{\eta\eta^{\prime}}(E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}} )=\dfrac{E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}}{exp\left[\left( E_{M,M^{\prime}}+ V_{\eta \eta^{\prime}}  \right)\beta\right]-1}
 \label{eq:fermi_conv}
 \end{equation}
 
-in which $\Delta E_{M,M^{\prime}}$ is the energy difference between energy levels $\ket{M}$ and $\ket{M^{\prime}}$, $V_{\eta \eta^{\prime}}$ is the potential difference between electrode $\eta$ and $\eta^{\prime}$, and $\beta=1/k_b T$. The rates $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ of Eq.~\ref{eq:scatt_rates} are explicitly written as:
+in which $E_{M,M^{\prime}}$ is the energy difference between energy levels $\ket{M}$ and $\ket{M^{\prime}}$, $V_{\eta \eta^{\prime}}$ is the potential difference between electrode $\eta$ and $\eta^{\prime}$, and $\beta=1/k_b T$. The rates $\Upsilon^{\eta\eta^{\prime}}_{M,M^{\prime}}$ of Eq.~\ref{eq:scatt_rates} are explicitly written as:
 
 \begin{equation}
 \label{eq:ups} 
@@ -253,33 +253,33 @@ The two terms $\mathcal{R}^{+}$ and $\mathcal{R}^{-}$ are defined as:
 It is possible to simplify (\ref{eq:scatt_rates}) and (\ref{eq:ups}) to obtain the expression for the inelastic scattering rates used in the main text:
 
 \begin{equation}
-    W_{MM^{\prime}}^{\eta \eta^{\prime}}=\dfrac{2\pi}{\hbar} \zeta^2 \varsigma_{\eta} \varsigma_{\eta^{\prime}} \mathcal{F}^{\eta\eta^{\prime}}(\Delta E_{M,M^{\prime}}+V_{\eta \eta^{\prime}} )  w_{MM^{\prime}}^{\eta \eta^{\prime}},
+    W_{MM^{\prime}}^{\eta \eta^{\prime}}=\dfrac{2\pi}{\hbar} \zeta^2 \varsigma_{\eta} \varsigma_{\eta^{\prime}} \mathcal{F}_{\eta\eta^{\prime}}(E_{M,M^{\prime}}+V_{\eta \eta^{\prime}} )  w_{MM^{\prime}}^{\eta \eta^{\prime}},
     \label{eq:elec_rates}
 \end{equation}
 
  $w_{MM^{\prime}}^{\eta \eta^{\prime}} = \sum_{a} \rho_a \lvert {\textbf{S}_{a,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2}$ is the inelastic term in Eq. (\ref{eq:ups}) and $\varsigma_{\eta/\eta^{\prime}} = T_o \nu^2_{\eta/\eta^{\prime}}$. Eq. (\ref{eq:ups}) also allows us to obtain expression for the three corresponding contributions to the current by imposing $\eta \neq \eta^{\prime} $.
 The elastic contribution:
 \begin{equation}
-I_0=\dfrac{e}{4} \dfrac{2\pi}{\hbar}  \varsigma_{S} \varsigma_{T} \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)
+I_0=\dfrac{e}{4} \dfrac{2\pi}{\hbar}  \varsigma_{S} \varsigma_{T} \left( \mathcal{F}_{ST}(V_{ST})-\mathcal{F}_{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)
 \label{eq:I_0}
 \end{equation}
 
 The elastic magnetoresistive contribution:
 \begin{equation}
-I_{MR}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T}  2 \zeta  \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} - \rho_{S \downarrow} \rho_{T\downarrow} \right) \langle \hat{S}_{z,\eta\eta^{\prime}} \rangle
+I_{MR}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T}  2 \zeta  \left( \mathcal{F}_{ST}(V_{ST})-\mathcal{F}_{TS}(V_{TS}) \right) \left( \rho_{S \uparrow} \rho_{T\uparrow} - \rho_{S \downarrow} \rho_{T\downarrow} \right) \langle \hat{S}_{z,\eta\eta^{\prime}} \rangle
 \label{eq:I_MR}
 \end{equation}
 
 And the inelastic contribution:
 \begin{equation}
-I_{in}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T} \zeta^2  \left( \mathcal{F}^{ST}(\Delta E_{M,M^{\prime}}+V_{ST})-\mathcal{F}^{TS}(\Delta E_{M,M^{\prime}}+V_{TS}) \right) \sum_{a} \rho_a \lvert {\hat{S}_{a,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2}
+I_{in}=\dfrac{e}{4} \dfrac{2\pi}{\hbar}\varsigma_{S} \varsigma_{T} \zeta^2  \left( \mathcal{F}_{ST}(E_{M,M^{\prime}}+V_{ST})-\mathcal{F}_{TS}(E_{M,M^{\prime}}+V_{TS}) \right) \sum_{a} \rho_a \lvert {\hat{S}_{a,\eta\eta^{\prime}}^{M,M^{\prime}}}\rvert^{2}
 \label{eq:I_in}
 \end{equation}
 
 Since the elastic contribution is orders of magnitude larger than the inelastic contribution, we take the average tunneling current $I_{avg}$ as equal to $I_{o}$. Treating $\zeta$ and $\varsigma_{S}$ as free parameters, and choosing reasonable values for $\rho_T$, allows us to solve for $\varsigma_{T}$ for the experimentally-known tunneling bias and current:
 
 \begin{equation}
-\varsigma_{T} =  \dfrac{4 \hbar I_0}{2 e \pi \varsigma_{S} \left( \mathcal{F}^{ST}(V_{ST})-\mathcal{F}^{TS}(V_{TS}) \right)\left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)}
+\varsigma_{T} =  \dfrac{4 \hbar I_0}{2 e \pi \varsigma_{S} \left( \mathcal{F}_{ST}(V_{ST})-\mathcal{F}_{TS}(V_{TS}) \right)\left( \rho_{S \uparrow} \rho_{T\uparrow} + \rho_{S \downarrow} \rho_{T\downarrow} \right)}
 \label{eq:el_rate}
 \end{equation} 
 This is advantageous as we expect $\varsigma_{T}$ to depend on the tip-adatom distance defined by the tunneling conditions, while $\zeta$ and $\varsigma_{S}$ are fixed.  
@@ -288,12 +288,12 @@ This is advantageous as we expect $\varsigma_{T}$ to depend on the tip-adatom di
 \label{phonon}
 In addition to electron scattering, we also consider phonon absorption and relaxation between the graphene and Dy adatom. We assume a 2D phononic bath similar to Ref. \cite{cervetti2016}. The 2D rates are functions of the 2D mass density of graphene $\rho_{gr}$, the speed of sound in graphene $c$, and the Bose-Einstein distribution. These rates are similar to the corresponding 3D rates defined by Eq. (10) in Ref. \cite{politi_tunneling_1995}, modified accordingly \cite{cervetti2016}: 
 \begin{equation}
- W_{MM^{\prime}}^{abs} =  \frac{ \nu_{ph}}{\rho_{gr} c^4 \hbar^3} \frac{\Delta E_{M,M^{\prime}}^2}{e^{\beta \Delta E_{M,M^{\prime}}} - 1} w_{MM^{\prime}}
+ W_{MM^{\prime}}^{abs} =  \frac{ \nu_{ph}}{\rho_{gr} c^4 \hbar^3} \frac{E_{M,M^{\prime}}^2}{e^{\beta E_{M,M^{\prime}}} - 1} w_{MM^{\prime}}
  \label{eq:phabs}
 \end{equation}
 
 \begin{equation}
- W_{MM^{\prime}}^{rel} =  \frac{ \nu_{ph}}{\rho_{gr} c^4 \hbar^3} \left( 1 + \frac{\Delta E_{M,M^{\prime}}^2}{e^{\beta \Delta E_{M,M^{\prime}}} - 1}\right) w_{MM^{\prime}}
+ W_{MM^{\prime}}^{rel} =  \frac{ \nu_{ph}}{\rho_{gr} c^4 \hbar^3} \left( 1 + \frac{E_{M,M^{\prime}}^2}{e^{\beta E_{M,M^{\prime}}} - 1}\right) w_{MM^{\prime}}
  \label{eq:phrel}
 \end{equation}
 \noindent
@@ -326,16 +326,12 @@ where $Z_o$ is the relative tip-adatom distance and $d$ is the exchange decay co
 
 \section{Variable Bias and Variable Current Results for the \textit{4f} Model}
 \begin{figure*}[h!]
-\includegraphics[width=0.98\textwidth]{model_4f.pdf}
-\caption{\textit{4f} Model. (\textbf{a}) A reproduction of Fig. 4c in the main text with the \textit{4f} model (green) at 1 K and 6.5 K. For simplicity, a constant field and current is used at each bias. (\textbf{b}) A reproduction of Fig. 5b in the main text with the \textit{4f} model (green). A clear difference between the \textit{4f} and \textit{4f5d6s} model is present in the high current regime.
+\includegraphics[width=0.5\textwidth]{model_4f.pdf}
+\caption{\textit{4f} Model Variable Bias. \textit{4f} (green) and \textit{4f5d6s} (red) model predictions of state occupancy as a function of bias at 1 K (dashed) and 6.5K (solid) for $\rho_{T \uparrow}$ = 0.7. Note that for simplicity, the tip field $B_{tip}$ (100 mT) and $I_o$ (15 pA) is kept constant for each bias. 
 \label{fig:bias_curr} }
 \end{figure*}
 
-At 6.5 K, there is an inappreciable difference between the \textit{4f} and \textit{4f5d6s} model in the state occupancy and lifetimes in the variable bias dataset (Fig. 4a-b) due to the temperature smearing of the transition pathways. In both cases, a set of free parameters exists that agrees with the experimental data reasonably well. However, if considering the occupancy at 1 K rather than 6.5 K the difference becomes more apparent. Fig.~\ref{fig:bias_curr}a compares the two models at 1 K and 6.5 K. At 1 K, the presence of the single transition pathway available in the \textit{4f} model is visible at at $|V_b|>5.5$ meV, while at $|V_b|<5.5$ meV, the asymmetry is primarily determined by the tip field $B^{tip}$. At higher temperature, the delineation between these two regimes is both spread across several meV and smoothed.   
-
-Fig.~\ref{fig:bias_curr}b compares the \textit{4f} and \textit{4f5d6s} model occupancy against the experimental current dependent measurements. While the \textit{4f5d6s} model exhibits the same trend as the measurements, the \textit{4f} model asymmetry increases with increasing current. The transition pathway with the lowest energy in the \textit{4f5d6s} model (through $\ket{m_{\pm 8}}$) results in a preferred low conductance state, producing the behavior seen in the high current regime. For the \textit{4f} model, the transition pathway with the lowest energy (through $\ket{\pm 6}$) results in a preferred high conductance state. Increasing the current therefore increases the strength of spin increasing processes that dominate tip-substrate scattering, and the preference for the high conductance state.  
-
-The most significant difference between the \textit{4f} and \textit{4f5d6s} model is the level schemes and the transition pathways allowed within each scheme. These differences manifest in the slope of the Arrhenius plot and in the high current regime of the variable current occupancy. While the free parameters used to fit the experimental data allow some flexibility, it is not possible to find a set of parameters within the \textit{4f} model that reproduce the experimental trends in these two cases. This emphasizes the importance of including the polarized \textit{5d6s} shell to model the spin dynamics of the Dy system.    
+At 6.5 K, there is an inappreciable difference between the \textit{4f} and \textit{4f5d6s} model in the state occupancy and lifetimes in the variable bias dataset (Fig. 4a-b of main text) due to the temperature smearing of the transition pathways. In both cases, a set of free parameters exists that agrees with the experimental data reasonably well. However, if considering the occupancy at 1 K rather than 6.5 K the difference becomes more apparent. Fig.~\ref{fig:bias_curr}a compares the two models at 1 K and 6.5 K. At 1 K, the presence of the single transition pathway available in the \textit{4f} model is visible at at $|V_b|>5.5$ meV, while at $|V_b|<5.5$ meV, the asymmetry is primarily determined by the tip field $B^{tip}$. At higher temperature, the delineation between these two regimes is both spread across several meV and smoothed.   
 
 
 \bibliographystyle{naturemag}
